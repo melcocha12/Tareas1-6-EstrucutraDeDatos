@@ -31,4 +31,6 @@ public:
 
   //metodo imprimir
   virtual void imprimir() = 0;
+
+  virtual int sizePila() = 0;
 };

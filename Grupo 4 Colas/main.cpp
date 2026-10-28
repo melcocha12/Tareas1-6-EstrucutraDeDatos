@@ -36,5 +36,8 @@ int main() {
         eliminar(frente, fin);
     }
     imprimir(frente);
+
+    cout << "Contar elementos en la cola: " << contarElementos(frente) << endl;
+    
     return 0;
 }

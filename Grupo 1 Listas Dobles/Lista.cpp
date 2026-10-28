@@ -105,3 +105,27 @@ ListaDoble::~ListaDoble() {
         delete temporal;
     }
 }
+
+
+void ListaDoble::invertir() {
+    Nodo* actual = cabeza;
+
+    while (actual != nullptr) {
+        // Guardar el siguiente nodo original
+        Nodo* temporal = actual->getSiguiente();
+
+        // Intercambiar los enlaces
+        actual->setSiguiente(actual->getAnterior());
+        actual->setAnterior(temporal);
+
+        // Avanzar al siguiente nodo original
+        actual = temporal;
+    }
+
+    // Intercambiar cabeza y cola
+    Nodo* temporal = cabeza;
+    cabeza = cola;
+    cola = temporal;
+
+    cout << "Lista invertida correctamente.\n";
+}

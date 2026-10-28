@@ -27,5 +27,9 @@ int main() {
     miLista.imprimirAdelante();
     miLista.imprimirAtras();
 
+    cout << "\n=== INVERTIR LISTA ===\n";
+    miLista.invertir();
+    miLista.imprimirAdelante();
+    miLista.imprimirAtras();
     return 0;
 }

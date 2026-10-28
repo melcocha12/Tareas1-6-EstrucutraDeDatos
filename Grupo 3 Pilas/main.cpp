@@ -22,12 +22,12 @@ int main() {
 
   do {
     std::cout << "Gestion de Personas\n" << std::endl;
-    std::cout << "1. Insertar" << std::endl;
-    std::cout << "2. Imprimir" << std::endl;
-    std::cout << "3. Buscar" << std::endl;
-    std::cout << "4. Eliminar" << std::endl;
-    std::cout << "5. Salir" << std::endl;
-
+    cout << "1. Insertar" << endl;
+    cout << "2. Imprimir" << endl;
+    cout << "3. Buscar" << endl;
+    cout << "4. Eliminar" << endl;
+    cout << "5. Mostrar cantidad de elementos" << endl;
+    cout << "6. Salir" << endl;
     std::cout << "Ingrese una Opcion: " << std::endl;
     std::cin >> opcion;
 switch (opcion) {
@@ -65,6 +65,11 @@ switch (opcion) {
             break;
 
         case 5:
+            cout << "\nNumero de elementos en la pila: "
+                << obj1->sizePila() << endl;
+            break;
+
+        case 6:
             cout << "\nSaliendo del programa..." << endl;
             break;
 

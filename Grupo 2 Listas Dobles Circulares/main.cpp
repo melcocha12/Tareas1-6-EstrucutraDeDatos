@@ -39,6 +39,7 @@ int main() {
     nombres.insertarAlFinal("Ana");
     nombres.insertarAlInicio("Luis");
     nombres.imprimir();
+    cout<<"Dato en posicion 1: "<<nombres.obtenerEnPosicion(1)<<endl;
 
     return 0;
 }

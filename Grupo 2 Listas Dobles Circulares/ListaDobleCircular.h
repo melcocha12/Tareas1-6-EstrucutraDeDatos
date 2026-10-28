@@ -22,6 +22,8 @@ public:
     void eliminar(T dato);
     void imprimir();
 
+    T obtenerEnPosicion(int pos);
+
 private:
     Nodo<T>* cabeza;
     int tamanio;
@@ -187,6 +189,24 @@ void ListaDobleCircular<T>::imprimir()
     } while (actual != cabeza);
 
     cout << endl;
+}
+
+template <typename T>
+T ListaDobleCircular<T>::obtenerEnPosicion(int pos)
+{
+    if (pos < 0 || pos >= tamanio)
+    {
+        throw out_of_range("Posicion fuera de rango");
+    }
+
+    Nodo<T>* actual = cabeza;
+
+    for (int i = 0; i < pos; i++)
+    {
+        actual = actual->getSiguiente();
+    }
+
+    return actual->getDato();
 }
 
 #endif

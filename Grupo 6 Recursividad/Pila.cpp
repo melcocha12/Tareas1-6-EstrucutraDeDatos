@@ -189,3 +189,15 @@ bool Pila::buscar(int objetivo)
    cima++;
    return encontrado;
 }
+
+int Pila::sumarElementos()
+{
+    int suma = 0;
+
+    for (int i = 0; i <= cima; i++)
+    {
+        suma += datos[i];
+    }
+
+    return suma;
+}

@@ -16,7 +16,8 @@ int main() {
         cout << "2. Eliminar elemento (Cima)" << endl;
         cout << "3. Buscar elemento" << endl;
         cout << "4. Imprimir pila" << endl;
-        cout << "5. Salir" << endl;
+        cout << "5. Sumar elementos de la pila" << endl;
+        cout << "6. Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
@@ -61,7 +62,12 @@ int main() {
                 }
                 break;
 
-            case 5:
+             case 5:
+                cout << "-> La suma de los elementos es: "
+                     << miPila.sumarElementos() << endl;
+                break;
+
+            case 6:
                 cout << "Saliendo del programa..." << endl;
                 break;
 
@@ -69,7 +75,7 @@ int main() {
                 cout << "Opcion invalida. Intente de nuevo." << endl;
                 break;
         }
-    } while (opcion != 5);
+    } while (opcion != 6);
 
     return 0;
 }

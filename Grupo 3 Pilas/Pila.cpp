@@ -14,7 +14,10 @@ Fecha: 00/10/2026                Erick Sabando, Adrian Toapanta
 #include "Persona.h"
 
 //constructor
-Pila::Pila() {}
+
+Pila::Pila() {
+    this->tope = nullptr;
+}
 
 //desctructor
 Pila::~Pila(){
@@ -81,4 +84,17 @@ bool Pila::buscar(const std::string &cedula) {
   }
   std::cout<<"Persona con la cedula: " << cedula << " no encontrada" << std::endl;
   return false;
+}
+
+
+int Pila::sizePila() {
+    int contador = 0;
+    Nodo* actual = this->tope;
+
+    while (actual != nullptr) {
+        contador++;
+        actual = actual->getSiguiente();
+    }
+
+    return contador;
 }
